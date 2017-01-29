@@ -1,8 +1,0 @@
-{
-  "head": "<style>.foo { color: blue }</style><link href=\"file.css\" rel=\"stylesheet\">",
-  "body": {
-    "element-id-a": "Lorem ipsum dolor sit amet",
-    "element-id-b": "consectetur adipisicing elit"
-  },
-  "foot": "<script src='node_modules/spf/dist/spf.js'></script><script>spf.init();</script>"
-}
