@@ -139,7 +139,7 @@ body {
 }
 
 #player #video {
-    min-height: 600px;
+    min-height: 350px;
     height: 100%;
     width: 100%;
 }
