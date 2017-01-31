@@ -157,7 +157,7 @@ body {
 
 #playlist .playlists-items {
     overflow-y: scroll;
-    max-height: 400px;
+    max-height: 398px;
     padding: 0px;
     height: 100%;
     margin-bottom: 0;
