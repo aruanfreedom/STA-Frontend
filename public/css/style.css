@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/* header start */
+
+body {
+    background: #f7f7f7;
+}
+
 #header ul {
     padding: 0;
     margin: 0;
@@ -14,38 +21,57 @@
     z-index: 100;
 }
 
+#header .u-pull-left a {
+    font-size: 1em;
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+#header .u-pull-right a {
+    padding: 10px 0px 10px 10px;
+}
+
+#header .u-pull-left a:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+#header #logo.u-pull-left a:hover {
+    background: none;
+}
+
 #header #logo a {
     font-size: 1.7em;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    padding: 0 20px 0 0;
 }
 
 #header ul li {
     list-style: none;
 }
 
-.card {
-    background: #f7f7f7;
-    padding: 40px;
-    border-radius: 2px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+
+/* Header end */
+
+
+/* Content start */
+
+#content {
+    padding: 60px 0;
 }
+
+
+/* Content end */
+
+
+/* Login start */
 
 #login {
     position: relative;
-    top: 60px;
     width: 100%;
-}
-
-.text-center {
-    text-align: center;
-}
-
-.uppercase {
-    text-transform: uppercase;
 }
 
 #login .login-card {
@@ -66,14 +92,16 @@
     text-decoration: underline;
 }
 
-label {
-    cursor: pointer;
-}
+
+/* Login end */
+
+
+/* Footer start */
 
 #footer {
     position: absolute;
     bottom: 0;
-    background: #D41C00;
+    background: #263238;
     padding: 10px 20px;
     box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
     height: 45px;
@@ -81,9 +109,112 @@ label {
 
 #footer a {
     color: #fff;
+    margin: 0 1px;
+    display: inline-block;
+    padding: 3px;
     text-decoration: none;
+}
+
+#footer a:hover {
+    background: rgba(0, 0, 0, .1);
 }
 
 #footer span {
     color: #fff;
+    margin: 0 1px;
+    display: inline-block;
+    padding: 3px;
 }
+
+
+/* Footer end */
+
+
+/* Player start */
+
+#player {
+    max-width: 1280px;
+    margin: 20px auto 0 auto;
+}
+
+#player object {
+    min-height: 495px;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Player end */
+
+
+/* Playlist start */
+
+#playlist .playlists-items {
+    overflow-y: scroll;
+    max-height: 295px;
+    height: 100%;
+}
+
+#playlist .playlists-items a {
+    color: #000;
+    text-decoration: none;
+}
+
+#playlist ul {
+    list-style: none;
+}
+
+#playlist ul li {
+    border-bottom: 2px solid #f7f7f7;
+    padding-bottom: 15px;
+}
+
+#playlist .playlist-add .playlist-title {
+    display: inline-block;
+    padding: 5px 0 0 0;
+    color: #000;
+}
+
+#playlist .playlist-add {
+    padding-right: 50px;
+}
+
+#playlist .playlist-add img {
+    cursor: pointer;
+}
+
+
+/* Playlist end */
+
+
+/* Element for all page start */
+
+.card {
+    background: #fff;
+    padding: 40px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+label {
+    cursor: pointer;
+}
+
+.max-center {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* Element for all page end */
