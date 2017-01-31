@@ -134,7 +134,8 @@ body {
 
 #player {
     max-width: 1280px;
-    margin: 20px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    margin: 0 auto;
 }
 
 #player object {
