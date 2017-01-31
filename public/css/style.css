@@ -138,10 +138,15 @@ body {
     margin: 0 auto;
 }
 
-#player object {
-    min-height: 495px;
+#player #video {
+    min-height: 600px;
     height: 100%;
     width: 100%;
+}
+
+.flowplayer.is-splash,
+.flowplayer .fp-message {
+    background-color: #bbb;
 }
 
 
@@ -152,8 +157,61 @@ body {
 
 #playlist .playlists-items {
     overflow-y: scroll;
-    max-height: 295px;
+    max-height: 400px;
+    padding: 0px;
     height: 100%;
+    margin-bottom: 0;
+}
+
+#playlist .playlists-items .playlists-item {
+    cursor: pointer;
+    padding: 15px 20px;
+    margin: 0;
+}
+
+#playlist .playlists-items .playlists-item:hover .playlist-ip {
+    color: #555;
+}
+
+#playlist .playlists-items .playlists-item:hover {
+    background-color: #e5e5e5;
+    background-color: rgba(158, 158, 158, 0.2);
+}
+
+#playlist .playlists-items .playlists-item .playlist-skrin {
+    height: 100px;
+    width: 100px;
+}
+
+#playlist .playlists-items .playlists-item .playlist-block-title {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+#playlist .playlists-items .playlists-item .options {
+    margin-top: 30px;
+    position: relative;
+}
+
+#playlist .playlists-items .playlists-item .options .options-title {
+    display: none;
+    background: #FF5722;
+    color: #fff;
+    /*padding: 5px 10px;
+    border-radius: 2px;*/
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#playlist .playlists-items .playlists-item .playlist-title {
+    display: block;
+}
+
+#playlist .playlists-items .playlists-item .playlist-ip {
+    display: block;
+    color: #ccc;
 }
 
 #playlist .playlists-items a {
@@ -177,7 +235,9 @@ body {
 }
 
 #playlist .playlist-add {
-    padding-right: 50px;
+    padding: 20px 25px 20px 20px;
+    border-bottom: 2px solid #f7f7f7;
+    margin: 0;
 }
 
 #playlist .playlist-add img {
