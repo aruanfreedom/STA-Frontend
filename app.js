@@ -4,7 +4,8 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var fs = require('fs');
+var os = require('os');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var destination = require('./routes/destination');
@@ -27,6 +28,28 @@ app.use('/', index);
 app.use('/users', users);
 
 app.use('/destination', destination);
+
+
+
+
+fs.stat(os.homedir() + "/Desktop/screenshots/", function (err, stats) {
+
+
+    if (stats == undefined) {
+
+
+        fs.mkdirSync(os.homedir() + "/Desktop/screenshots/");
+
+    } else {
+
+
+        console.log("\x1b[42m", err);
+
+    }
+
+
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

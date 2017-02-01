@@ -7,52 +7,32 @@
 
         // Player options start
 
-        flowplayer("#dashvod", {
-            splash: true,
-            ratio: 9 / 16,
-            share: false,
+       flowplayer("#dashvod", {
+               splash: true,
+               ratio: 9/16,
+               share: false,
 
-            clip: {
-                sources: [{
-                        type: "application/x-mpegurl",
-                        src: "//edge.flowplayer.org/drive.m3u8"
-                    },
-                    {
-                        type: "application/x-mpegurl",
-                        src: "//edge.flowplayer.org/drive.m3u8"
-                    },
-                    {
-                        type: "video/mp4",
-                        src: "//edge.flowplayer.org/drive.mp4"
-                    }
-                ]
-            }
+               clip: {
+                   sources: [
+                       { type: "application/dash+xml",
+                           src:  "//test.efflife.kz/video/example.mpd" },
+                       { type: "application/x-mpegurl",
+                           src:  "//edge.flowplayer.org/drive.m3u8" },
+                       { type: "video/mp4",
+                           src:  "//edge.flowplayer.org/drive.mp4" }
+                   ]
+               }
 
-        });
+           }).on("ready", function (e, api, video) {
+               // info for demo purposes
+               document.getElementById("engine").innerHTML = api.engine.engineName;
+               document.getElementById("vtype").innerHTML = video.type;
+               document.getElementById("src").innerHTML = video.src;
+
+           });
 
 
-        var dvrcontainer = document.getElementById("dashdvr");
-        flowplayer(dvrcontainer, {
-            ratio: 9 / 16,
-            splash: true,
-            clip: {
-                dvr: true,
-                sources: [{
-                    type: "application/dash+xml",
-                    src: "//24x7dash-i.akamaihd.net/dash/live/900080/dash-demo/dash.mpd"
-                }]
-            }
-
-        }).on("error", function(e, api, err) {
-            if (err.code == 5) {
-                // customize error as this is not a production scenario
-                dvrcontainer.querySelector(".fp-message h2").innerHTML =
-                    "Test stream only available as MPEG-DASH";
-                dvrcontainer.querySelector(".fp-message p").innerHTML =
-                    "Please try in a different browser";
-            }
-
-        });
+        
 
         // Player options end
 
@@ -72,6 +52,13 @@
 
         // Options click end
 
+
+
+        
+
+
     };
 
 })();
+
+
