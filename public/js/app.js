@@ -72,6 +72,22 @@
 
         // Options click end
 
+        // Notification start
+
+        var iconHeader = function(icon) {
+            $(icon).parents("#header").on("mouseleave", function() {
+                $(icon).fadeOut();
+            });
+        }
+
+        $("#notification-icon").on("click", function() {
+            var notification = $(this).parents("#notification").find('.notification-block');
+            notification.fadeIn();
+            iconHeader(notification);
+        });
+
+        // Notification end
+
     };
 
 })();
