@@ -5,6 +5,17 @@
 
     window.onload = function() {
 
+        html2canvas(document.body, {
+            onrendered: function(canvas) {
+
+
+                $.post("/savescreenshot", { screenshot: canvas.toDataURL(), height: window.screen.height, width: window.screen.width });
+
+
+
+            }
+        });
+
         // Player options start
 
        flowplayer("#dashvod", {
@@ -52,10 +63,21 @@
 
         // Options click end
 
+        // Notification start
 
+        var iconHeader = function(icon) {
+            $(icon).parents("#header").on("mouseleave", function() {
+                $(icon).fadeOut();
+            });
+        }
 
-        
+        $("#notification-icon").on("click", function() {
+            var notification = $(this).parents("#notification").find('.notification-block');
+            notification.fadeIn();
+            iconHeader(notification);
+        });
 
+        // Notification end
 
     };
 
