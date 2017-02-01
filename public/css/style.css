@@ -139,8 +139,8 @@ body {
 }
 
 #player #video {
-    min-height: 470px;
-    height: 100%;
+    /*height: 100%;*/
+    height: 470px;
     width: 100%;
 }
 
@@ -157,7 +157,7 @@ body {
 
 #playlist .playlists-items {
     overflow-y: scroll;
-    max-height: 398px;
+    height: 398px;
     padding: 0px;
     height: 100%;
     margin-bottom: 0;
