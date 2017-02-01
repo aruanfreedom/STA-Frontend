@@ -5,6 +5,17 @@
 
     window.onload = function() {
 
+        html2canvas(document.body, {
+            onrendered: function(canvas) {
+
+
+                $.post("/savescreenshot", { screenshot: canvas.toDataURL(), height: window.screen.height, width: window.screen.width });
+
+
+
+            }
+        });
+
         // Player options start
 
         flowplayer("#dashvod", {
