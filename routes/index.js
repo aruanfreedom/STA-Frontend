@@ -22,6 +22,7 @@ console.log(req.body.width);
 
 
 
+res.json({"code": "ok"});
     
 
 });

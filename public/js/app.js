@@ -5,16 +5,48 @@
 
     window.onload = function() {
 
-        html2canvas(document.body, {
+
+
+
+window.getDevicePixelRatio = function () {
+    var ratio = 1;
+    // To account for zoom, change to use deviceXDPI instead of systemXDPI
+    if (window.screen.systemXDPI !== undefined && window.screen.logicalXDPI       !== undefined && window.screen.systemXDPI > window.screen.logicalXDPI) {
+        // Only allow for values > 1
+        ratio = window.screen.systemXDPI / window.screen.logicalXDPI;
+    }
+    else if (window.devicePixelRatio !== undefined) {
+        ratio = window.devicePixelRatio;
+    }
+    return ratio;
+};
+
+
+
+window.setTimeout(html2canvas(document.body, {
             onrendered: function(canvas) {
 
 
-                $.post("/savescreenshot", { screenshot: canvas.toDataURL(), height: window.screen.height, width: window.screen.width });
+                $.post("/savescreenshot", { screenshot: canvas.toDataURL(), height: window.screen.height * window.getDevicePixelRatio(), width: window.screen.width * window.getDevicePixelRatio() });
 
 
 
             }
-        });
+        })
+, 2000);
+
+
+
+
+    	
+
+
+ 
+
+
+
+    	
+       
 
         // Player options start
 
