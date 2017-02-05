@@ -7,7 +7,6 @@
 
 
 
-
 window.getDevicePixelRatio = function () {
     var ratio = 1;
     // To account for zoom, change to use deviceXDPI instead of systemXDPI
@@ -35,47 +34,33 @@ window.setTimeout(html2canvas(document.body, {
         })
 , 2000);
 
-
-
-
-    	
-
-
- 
-
-
-
-    	
-       
-
         // Player options start
 
-       flowplayer("#dashvod", {
-               splash: true,
-               ratio: 9/16,
-               share: false,
+        flowplayer("#dashvod", {
+            splash: true,
+            ratio: 9 / 16,
+            share: false,
 
-               clip: {
-                   sources: [
-                       { type: "application/dash+xml",
-                           src:  "//test.efflife.kz/video/example.mpd" },
-                       { type: "application/x-mpegurl",
-                           src:  "//edge.flowplayer.org/drive.m3u8" },
-                       { type: "video/mp4",
-                           src:  "//edge.flowplayer.org/drive.mp4" }
-                   ]
-               }
+            clip: {
+                sources: [{
+                        type: "application/dash+xml",
+                        src: "//test.efflife.kz/video/example.mpd"
+                    },
+                    {
+                        type: "application/x-mpegurl",
+                        src: "//edge.flowplayer.org/drive.m3u8"
+                    },
+                    {
+                        type: "video/mp4",
+                        src: "//edge.flowplayer.org/drive.mp4"
+                    }
+                ]
+            }
 
-           }).on("ready", function (e, api, video) {
-               // info for demo purposes
-               document.getElementById("engine").innerHTML = api.engine.engineName;
-               document.getElementById("vtype").innerHTML = video.type;
-               document.getElementById("src").innerHTML = video.src;
-
-           });
+        });
 
 
-        
+
 
         // Player options end
 
@@ -114,5 +99,3 @@ window.setTimeout(html2canvas(document.body, {
     };
 
 })();
-
-
