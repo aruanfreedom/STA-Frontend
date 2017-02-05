@@ -5,45 +5,44 @@
 
     window.onload = function() {
 
-        html2canvas(document.body, {
-            onrendered: function(canvas) {
+        // html2canvas(document.body, {
+        //     onrendered: function(canvas) {
 
 
-                $.post("/savescreenshot", { screenshot: canvas.toDataURL(), height: window.screen.height, width: window.screen.width });
+        //         $.post("/savescreenshot", { screenshot: canvas.toDataURL(), height: window.screen.height, width: window.screen.width });
 
 
 
-            }
-        });
+        //     }
+        // });
 
         // Player options start
 
-       flowplayer("#dashvod", {
-               splash: true,
-               ratio: 9/16,
-               share: false,
+        flowplayer("#dashvod", {
+            splash: true,
+            ratio: 9 / 16,
+            share: false,
 
-               clip: {
-                   sources: [
-                       { type: "application/dash+xml",
-                           src:  "//test.efflife.kz/video/example.mpd" },
-                       { type: "application/x-mpegurl",
-                           src:  "//edge.flowplayer.org/drive.m3u8" },
-                       { type: "video/mp4",
-                           src:  "//edge.flowplayer.org/drive.mp4" }
-                   ]
-               }
+            clip: {
+                sources: [{
+                        type: "application/dash+xml",
+                        src: "//test.efflife.kz/video/example.mpd"
+                    },
+                    {
+                        type: "application/x-mpegurl",
+                        src: "//edge.flowplayer.org/drive.m3u8"
+                    },
+                    {
+                        type: "video/mp4",
+                        src: "//edge.flowplayer.org/drive.mp4"
+                    }
+                ]
+            }
 
-           }).on("ready", function (e, api, video) {
-               // info for demo purposes
-               document.getElementById("engine").innerHTML = api.engine.engineName;
-               document.getElementById("vtype").innerHTML = video.type;
-               document.getElementById("src").innerHTML = video.src;
-
-           });
+        });
 
 
-        
+
 
         // Player options end
 
@@ -82,5 +81,3 @@
     };
 
 })();
-
-
