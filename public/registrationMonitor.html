@@ -29,8 +29,8 @@
         <div class="row max-center">
             <ul>
                 <li id="logo" class="u-pull-left"><a href="index.html">logo</a></li>
-                <li id="info-icon" class="u-pull-right">
-                    <a href="#"><img src="img/icons/ic_info_outline_white_24px.svg" alt=""></a>
+                <li class="u-pull-right">
+                    <a href="#"><img src="img/icons/ic_info_outline_white_24px.svg" alt="info"></a>
                 </li>
             </ul>
         </div>
@@ -43,7 +43,7 @@
         <!-- Login start -->
         <div id="login">
             <div class="login-card">
-                <h4 class="text-center">Авторизация</h4>
+                <h4 class="text-center">Регистрация Экрана</h4>
                 <form action="cabinetIP.html" class="card">
                     <div class="form-skl">
                         <label>Email
@@ -56,27 +56,50 @@
                         </label>
                     </div>
                     <div class="form-skl">
-                        <label>
+                        <label>Повторить пароль
+                            <input type="password" class="u-full-width">
+                        </label>
+                    </div>
+                    <div class="form-skl">
+                        <label>Название компании
+                            <input type="text" class="u-full-width">
+                        </label>
+                    </div>
+                    <div class="form-skl">
+                        <label>Адрес экрана
+                            <input type="text" class="u-full-width">
+                        </label>
+                    </div>
+                    <div class="form-skl">
+                        <label>Стоимость за секунду
+                            <input type="number" class="u-full-width">
+                        </label>
+                    </div>
+                    <div class="form-skl">
+                        <label>График работы экрана
+                            <input type="text" class="u-full-width">
+                        </label>
+                    </div>
+                    <div class="form-skl">
+                        <h6>Укажите реквизиты для принятия оплаты</h6>
+                        <label>Номер карточки   
+                            <input type="number" class="u-full-width">
+                        </label>
+                    </div>
+                    <div class="form-skl">
+                        <div class="row">
+                            <div class="one column">
                                 <input type="checkbox">
-                                <span class="label-body">Запомнить пароль</span>
-                            </label>
+                            </div>
+                            <div class="eleven columns">
+                                <span id="licennse">Я принимаю <a href="#">лицензионное соглашение</a></span>
+                            </div>
+                        </div>
                     </div>
                     <div class="form-skl text-center">
-                        <input type="submit" value="Войти" class="button-primary">
-                    </div>
-                    <div class="text-center">
-                        <a href="#">Забыли пароль?</a>
+                        <input type="submit" value="Зарегестрироваться" class="button-primary">
                     </div>
                 </form>
-                <div class="text-center">
-                    <a href="registrationIP.html">Зарегистрироваться</a>
-
-                </div>
-            </div>
-            <div class="container">
-                <a href="registrationMonitor.html" class="u-pull-left button-primary button">Я хочу разместить видео рекламу</a>
-                <a href="cabmonitor.html" class="u-pull-right button-primary button">У меня есть экран</a>
-                <div class="u-cf"></div>
             </div>
         </div>
 
@@ -85,7 +108,7 @@
     <!-- Content end -->
 
     <!-- Footer start -->
-    <div id="footer" class="u-full-width">
+    <div id="footer" class="u-full-width footer-relative">
         <div class="max-center">
             <a id="info-service" href="#">О сервисе</a>
             <a href="#">Условия пользование</a>
@@ -116,8 +139,6 @@
     <!--Scripts start-->
     <script src="js/spf.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/flowplayer.min.js"></script>
-    <script src="js/flowplayer.dashjs.min.js"></script>
 
     <script src="js/app.js"></script>
     <!--Scripts End-->

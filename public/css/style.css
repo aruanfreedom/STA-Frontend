@@ -218,6 +218,24 @@ body {
     color: #555;
 }
 
+#playlist .playlists-items .playlists-item.confirmed {
+    background-color: #009688;
+    background-color: rgba(0, 150, 136, 0.2);
+}
+
+#playlist .playlists-items .playlists-item.not-confirmed {
+    background-color: #F44336;
+    background-color: rgba(244, 67, 54, 0.2);
+}
+
+#playlist .playlists-items .playlists-item.not-confirmed .playlist-ip {
+    color: #555;
+}
+
+#playlist .playlists-items .playlists-item.confirmed .playlist-ip {
+    color: #555;
+}
+
 #playlist .playlists-items .playlists-item:hover {
     background-color: #e5e5e5;
     background-color: rgba(158, 158, 158, 0.2);
@@ -410,6 +428,40 @@ label {
     max-width: 1280px;
     margin: 0 auto;
 }
+
+#licennse {
+    font-size: 0.7em;
+}
+
+
+/* Modal start */
+
+#modal-info {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    padding-top: 5%;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+}
+
+#modal-info .modal-block {
+    position: relative;
+    z-index: 101;
+}
+
+#modal-info .modal-block .close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+
+/* Modal end */
 
 
 /* Element for all page end */
