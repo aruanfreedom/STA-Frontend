@@ -10,11 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--Css start-->
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/skeleton.css" />
-    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" href="css/skin.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <!--Css end-->
+
+    <link rel="icon" type="image/ico" href="favicon.ico">
 
     <!--Js scripts-->
     <script src="js/modernizr.js"></script>
@@ -29,8 +31,37 @@
         <div class="row max-center">
             <ul>
                 <li id="logo" class="u-pull-left"><a href="index.html">logo</a></li>
+                <li class="u-pull-left"><a href="cabinetIP.html">Кабинет ИПшника</a></li>
+                <li class="u-pull-left"><a href="selectmonitor.html">Выбрать экран для размещения</a></li>
                 <li id="info-icon" class="u-pull-right">
                     <a href="#"><img src="img/icons/ic_info_outline_white_24px.svg" alt=""></a>
+                </li>
+                <li id="notification" class="u-pull-right">
+                    <a href="#"><img id="notification-icon" src="img/icons/ic_notifications_none_white_24px.svg" alt=""></a>
+                    <div class="notification-block">
+                        <div class="notfication-item">
+                            <div class="row">
+                                <div class="four columns">
+                                    <img class="notification-img" src="img/playlist/skrin.png" alt="delete">
+                                </div>
+                                <div class="eight columns">
+                                    <p class="notification-des">Извините, но видео которое вы прислали для размещения на моем экране, не подходит. Поробуйте, его переделать, и прислать снова.</p>
+                                    <small class="notification-date u-pull-right">23.02.2017 / 23:02</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="notfication-item">
+                            <div class="row">
+                                <div class="four columns">
+                                    <img class="notification-img" src="img/playlist/skrin.png" alt="delete">
+                                </div>
+                                <div class="eight columns">
+                                    <p class="notification-des">Извините, но видео которое вы прислали для размещения на моем экране, не подходит. Поробуйте, его переделать, и прислать снова.</p>
+                                    <small class="notification-date u-pull-right">23.02.2017 / 23:02</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -40,50 +71,27 @@
     <!-- Content start -->
     <div id="content">
 
-        <!-- Login start -->
-        <div id="login">
-            <div class="login-card">
-                <div id="app">
-                    {{ message }}
+        <!-- Select monitor -->
+        <div id="select-company">
+            <div class="row">
+                <div class="four columns">
+                    <div class="company-skrin card">
+                        <img src="img/company_0.jpg" alt="skrin">
+                    </div>
                 </div>
-                <h4 class="text-center">Авторизация</h4>
-                <form action="cabinetIP.html" class="card">
-                    <div class="form-skl">
-                        <label>Email
-                            <input type="email" class="u-full-width">
-                        </label>
+                <div class="eight columns">
+                    <div class="company-description card">
+                        <p>Название компании</p>
+                        <p>Адрес экрана</p>
+                        <p>Стоимость за секунду</p>
+                        <p>График работы экрана: 09:00-22:00</p>
                     </div>
-                    <div class="form-skl">
-                        <label>Пароль
-                            <input type="password" class="u-full-width">
-                        </label>
-                    </div>
-                    <div class="form-skl">
-                        <label>
-                                <input type="checkbox">
-                                <span class="label-body">Запомнить пароль</span>
-                            </label>
-                    </div>
-                    <div class="form-skl text-center">
-                        <input type="submit" value="Войти" class="button-primary">
-                    </div>
-                    <div class="text-center">
-                        <a href="#">Забыли пароль?</a>
-                    </div>
-                </form>
-                <div class="text-center">
-                    <a href="registrationIP.html">Зарегистрироваться</a>
-
                 </div>
-            </div>
-            <div class="container">
-                <a href="registrationMonitor.html" class="u-pull-left button-primary button">Я хочу разместить видео рекламу</a>
-                <a href="cabmonitor.html" class="u-pull-right button-primary button">У меня есть экран</a>
-                <div class="u-cf"></div>
             </div>
         </div>
 
-        <!-- Login end -->
+        <!-- Select end -->
+
     </div>
     <!-- Content end -->
 
@@ -94,8 +102,8 @@
             <a href="#">Условия пользование</a>
             <a href="#">Правило и безопасность</a>
             <span class="u-pull-right">
-            @2017 AdsMe, LLC
-        </span>
+                @2017 AdsMe, LLC
+            </span>
         </div>
     </div>
     <!-- Footer end -->
@@ -117,14 +125,19 @@
     <!-- Modal end -->
 
     <!--Scripts start-->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="js/spf.js"></script>
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/flowplayer.min.js"></script>
     <script src="js/flowplayer.dashjs.min.js"></script>
 
+    <script type="text/javascript" src="js/html2canvas.js"></script>
     <script src="js/app.js"></script>
     <!--Scripts End-->
+
+
+
+
+
 
 </body>
 

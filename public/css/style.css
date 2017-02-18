@@ -183,6 +183,16 @@ body {
     margin: 0 auto;
 }
 
+#select-company {
+    max-width: 1280px;
+    padding: 55px 20px 0 20px;
+    margin: 0 auto;
+}
+
+#select-company .company-skrin img {
+    width: 100%;
+}
+
 #player #video {
     /*height: 100%;*/
     height: 470px;
